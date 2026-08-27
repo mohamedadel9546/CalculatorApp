@@ -18,7 +18,21 @@
         {
             return num1 * num2;
         }
-            static void Main(string[] args)
+       static int Divide(int num1, int num2)
+        {
+            try
+            {
+                return num1 / num2;
+            }
+            catch
+            {
+                  Console.WriteLine("Error: Division by zero is not allowed.");
+                return 0;
+            }
+        }
+
+
+        static void Main(string[] args)
         {
             while (true)
             {
@@ -40,6 +54,9 @@
                         break;
                     case "*":
                       Console.WriteLine("Result: " + Multibly(num1, num2));
+                        break;
+                    case "/":
+                      Console.WriteLine("Result: " + Divide(num1, num2));
                         break;
 
                     default:
